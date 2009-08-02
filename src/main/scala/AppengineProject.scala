@@ -17,6 +17,9 @@ abstract class AppengineProject(info: ProjectInfo) extends DefaultWebProject(inf
   val javaxJDO2 = "javax.jdo" % "jdo2-api" % "2.3-ea" % "compile->default"
   val dataNucleusEnhancer = "org.datanucleus" % "datanucleus-enhancer" % "1.1.4" % "appengine->default"
 
+  val appEngineApiStubs = "com.google.appengine" % "appengine-api-1.0-stubs" % "1.2.2" % "test->default"
+  val appEngineApiRuntime = "com.google.appengine" % "appengine-api-1.0-runtime" % "1.2.2" % "test->default"
+
   override def ivyXML =
     <dependencies>
       <dependency org="com.google.appengine.orm" name="datanucleus-appengine" rev="1.0.1">
